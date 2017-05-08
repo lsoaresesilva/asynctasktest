@@ -1,13 +1,14 @@
 # Summary
 
-AsyncTaskTest is a library to easier the process of testing AsyncTask classes.
+AsyncTaskTest is a library to easier the process of testing Android AsyncTask classes.
 There are multiple ways to test AsyncTask, but most of them are complex or relies on changing class structure.
-AsyncTaskTest was made to be easy to use without any modification on your class, you just use it on your jUnit tests.
+
+With AsyncTaskTest you just use its methods on your jUnit tests.
 
 
 # Installation
 
-I'm working to put it on gradle, until, just copy the files AsyncTaskTest and AsyncTest to your project.
+I'm working to put it on Gradle, until, just copy the files AsyncTaskTest and AsyncTest to your project.
 
 # Usage
 
@@ -20,9 +21,12 @@ Example:
   	// ... implementation
   }
 	
+  ----
+  public class MyClassTest {
 	
   // On your test file:
   // For better understanding I will omit some parts with ...
+  @Test
   public void makeGETRequest(){
 		...
 		myAsyncTaskInstance.execute(...);
@@ -34,6 +38,8 @@ Example:
                         }
                     });
 		
+  }	
+  
   }
 ``
 
